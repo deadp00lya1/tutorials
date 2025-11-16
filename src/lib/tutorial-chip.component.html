@@ -1,0 +1,10 @@
+<div class="chip" [ngStyle]="{ top: position.top, left: position.left }">
+    <span>{{ message }}</span>
+</div>
+<div class="modal-overlay" >
+    <div class="modal-content" >
+       <button class="custom-chip primary" *ngIf="!isLastStep" (click)="onNextClick()">Next</button>&nbsp;
+        &nbsp;
+        <button class="custom-chip secondary" (click)="onDoneClick()">{{ isLastStep ? 'Done' : 'skip' }}</button>
+    </div>
+</div>

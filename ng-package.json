@@ -1,0 +1,7 @@
+{
+  "lib": {
+    "entryFile": "src/lib/index.ts"
+  },
+  "dest": "dist/ng-tutorials"
+}
+

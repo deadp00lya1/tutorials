@@ -1,0 +1,80 @@
+.modal-overlay {
+    position: fixed;
+    width: 40%;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 1000;
+    padding: 20px 30% 20px 30%;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #00000024;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.tutorial-highlight {
+    outline: 3px solid #42a5f5;
+    box-shadow: 0 0 12px rgba(66, 165, 245, 0.7);
+    border-radius: 6px;
+    animation: pulseGlow 1.5s infinite;
+    transition: box-shadow 0.3s ease, outline 0.3s ease;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 12px rgba(66, 165, 245, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(66, 165, 245, 1);
+    }
+    100% {
+        box-shadow: 0 0 12px rgba(66, 165, 245, 0.7);
+    }
+}
+.primary{
+    background:white !important;
+}
+.secondary{
+
+}
+.custom-chip{
+    background: rgb(0 121 107/ 27%) ;
+    color: black;
+    padding: 10px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+.chip {
+    position: absolute;
+    background: rgb(0 121 107/ 27%) !important;
+    color: black;
+    padding: 10px 16px;
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: top 0.3s ease, left 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 0.4s forwards;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
