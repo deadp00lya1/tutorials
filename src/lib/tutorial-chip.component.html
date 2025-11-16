@@ -3,8 +3,13 @@
 </div>
 <div class="modal-overlay" >
     <div class="modal-content" >
-       <button class="custom-chip primary" *ngIf="!isLastStep" (click)="onNextClick()">Next</button>&nbsp;
+        <div class="description-card">
+            <span>{{ description }}</span></div>
+        <br>
+        <button class="custom-chip primary" *ngIf="!isLastStep" (click)="onNextClick()">Next</button>&nbsp;
         &nbsp;
         <button class="custom-chip secondary" (click)="onDoneClick()">{{ isLastStep ? 'Done' : 'skip' }}</button>
     </div>
 </div>
+
+

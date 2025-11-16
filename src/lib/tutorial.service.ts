@@ -6,26 +6,22 @@ export class TutorialService {
     private steps: any[] = [];
 
     private currentStepIndexSubject = new BehaviorSubject<number>(0);
-    currentStepIndex$ = this.currentStepIndexSubject.asObservable();
-    private tutorialTrigger = new Subject<string>();
-    tutorialTrigger$ = this.tutorialTrigger.asObservable();
 
-    triggerTutorial(topic: string) {
-        this.tutorialTrigger.next(topic);
-    }
+
     setCurrentStepIndex(step: number) {
         this.currentStepIndexSubject.next(step);
     }
 
 
-    loadTutorial(item:any[]): void {
-      debugger
+    loadTutorial(item: any): void {
+        this.setCurrentStepIndex(0);
         this.steps = item;
 
     }
 
+
     getCurrentStep() {
-       return this.steps[this.currentStepIndexSubject.value];
+        return this.steps[this.currentStepIndexSubject.value];
     }
 
     nextStep() {
