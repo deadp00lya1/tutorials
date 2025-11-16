@@ -16,6 +16,7 @@ export class TutorialChipComponent {
     @Output() next = new EventEmitter<void>();
 
     @Input() message!: string;
+    @Input() description!: string;
     @Input() isLastStep: boolean = false;
     @Output() done = new EventEmitter<void>();
 
